@@ -14,20 +14,65 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/sign-in": {
+    params: {};
+  };
+  "/sign-up": {
+    params: {};
+  };
+  "/forgot-password": {
+    params: {};
+  };
+  "/reset-password": {
+    params: {};
+  };
+  "/verify-email": {
+    params: {};
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/";
+    page: "/" | "/sign-in" | "/sign-up" | "/forgot-password" | "/reset-password" | "/verify-email";
+  };
+  "routes/auth/auth-layout.tsx": {
+    id: "routes/auth/auth-layout";
+    page: "/" | "/sign-in" | "/sign-up" | "/forgot-password" | "/reset-password" | "/verify-email";
   };
   "routes/root/home.tsx": {
     id: "routes/root/home";
     page: "/";
   };
+  "routes/auth/sign-in.tsx": {
+    id: "routes/auth/sign-in";
+    page: "/sign-in";
+  };
+  "routes/auth/sign-up.tsx": {
+    id: "routes/auth/sign-up";
+    page: "/sign-up";
+  };
+  "routes/auth/forgot-password.tsx": {
+    id: "routes/auth/forgot-password";
+    page: "/forgot-password";
+  };
+  "routes/auth/reset-password.tsx": {
+    id: "routes/auth/reset-password";
+    page: "/reset-password";
+  };
+  "routes/auth/verify-email.tsx": {
+    id: "routes/auth/verify-email";
+    page: "/verify-email";
+  };
 };
 
 type RouteModules = {
   "root": typeof import("./app/root.tsx");
+  "routes/auth/auth-layout": typeof import("./app/routes/auth/auth-layout.tsx");
   "routes/root/home": typeof import("./app/routes/root/home.tsx");
+  "routes/auth/sign-in": typeof import("./app/routes/auth/sign-in.tsx");
+  "routes/auth/sign-up": typeof import("./app/routes/auth/sign-up.tsx");
+  "routes/auth/forgot-password": typeof import("./app/routes/auth/forgot-password.tsx");
+  "routes/auth/reset-password": typeof import("./app/routes/auth/reset-password.tsx");
+  "routes/auth/verify-email": typeof import("./app/routes/auth/verify-email.tsx");
 };
