@@ -1,9 +1,15 @@
 import React from 'react'
 
 const SignIn = () => {
+  const form = useForm();
   return (
-    <div>SignIn</div>
+    
   )
 }
 
 export default SignIn
+
+function useForm() {
+  throw new Error('Function not implemented.');
+}
+
