@@ -1,5 +1,7 @@
 import React from 'react'
 import type { Route } from '../../+types/root';
+import { Sign } from 'crypto';
+import SignIn from '../auth/sign-in';
 
 
 export function meta({}: Route.MetaArgs) {
@@ -13,7 +15,10 @@ export function meta({}: Route.MetaArgs) {
 
 const HomePage = () => {
   return (
-    <div>home</div>
+    <>
+    
+    <SignIn />
+    </>
   )
 }
 
